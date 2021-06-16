@@ -25,6 +25,26 @@ class DiskViewController: MainViewViewController {
         }
     }
 
+    @IBOutlet private var diskIOCheckbox: NSButton! {
+        didSet {
+            diskIOCheckbox.state = AppDelegate.userSettings.settings.disk.showDiskIO ? .on : .off
+        }
+    }
+
+    @IBAction private func diskIOCheckboxChanged(_ sender: NSButton) {
+        let activated = sender.state == NSButton.StateValue.on
+
+        AppDelegate.userSettings.settings.disk.showDiskIO = activated
+
+        if activated {
+            AppDelegate.menuBarItemManager.diskIO.show()
+        } else {
+            AppDelegate.menuBarItemManager.diskIO.hide()
+        }
+
+        DDLogInfo("Did set disk io checkbox value to (\(activated))")
+    }
+
     // MARK: -
     // MARK: Function Overrides
     override func updateGUIComponents() {
@@ -48,6 +68,6 @@ class DiskViewController: MainViewViewController {
             AppDelegate.menuBarItemManager.diskUsage.hide()
         }
 
-        DDLogInfo("Did set disk checkbox value to (\(activated))")
+        DDLogInfo("Did set disk usage checkbox value to (\(activated))")
     }
 }

@@ -10,6 +10,7 @@
 		0282AFC72452B61F0026FD19 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0282AFC62452B61F0026FD19 /* Dialog.swift */; };
 		274CA92A244ED22600BD8163 /* DiskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274CA929244ED22600BD8163 /* DiskViewController.swift */; };
 		6CA197EE9972523C071FC0F4 /* Pods_iGlance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3175EF0B347DBD4AE56293 /* Pods_iGlance.framework */; };
+		6D83B8AC266F1CC500C7681F /* DiskIOMenuBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D83B8AB266F1CC500C7681F /* DiskIOMenuBarItem.swift */; };
 		B4060E3223C4FAEF00CD945E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4060E3123C4FAEF00CD945E /* Constants.swift */; };
 		B40BBA64251FB53500D2690E /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BBA63251FB53500D2690E /* BackgroundColorView.swift */; };
 		B415FF2723F459EF00ED6567 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B415FF2623F459EF00ED6567 /* MemoryViewController.swift */; };
@@ -126,6 +127,7 @@
 		3DE315620689BE2F69344567 /* Pods-iGlanceLauncher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGlanceLauncher.debug.xcconfig"; path = "Target Support Files/Pods-iGlanceLauncher/Pods-iGlanceLauncher.debug.xcconfig"; sourceTree = "<group>"; };
 		48FFD35BD7BF5BFC156A284B /* Pods-iGlance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGlance.debug.xcconfig"; path = "Target Support Files/Pods-iGlance/Pods-iGlance.debug.xcconfig"; sourceTree = "<group>"; };
 		6D3175EF0B347DBD4AE56293 /* Pods_iGlance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iGlance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D83B8AB266F1CC500C7681F /* DiskIOMenuBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskIOMenuBarItem.swift; sourceTree = "<group>"; };
 		B4060E2E23C4F84D00CD945E /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		B4060E3123C4FAEF00CD945E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B40BBA63251FB53500D2690E /* BackgroundColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorView.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				B452554723E358E7000F79BF /* MenuBarItem.swift */,
 				B452554A23E358E7000F79BF /* MenuBarItemManager.swift */,
 				DAB005672437C70F00E737DD /* DiskUsageMenuBarItem.swift */,
+				6D83B8AB266F1CC500C7681F /* DiskIOMenuBarItem.swift */,
 			);
 			path = MenuBarItems;
 			sourceTree = "<group>";
@@ -527,6 +530,8 @@
 			dependencies = (
 			);
 			name = iGlance;
+			packageProductDependencies = (
+			);
 			productName = iGlance;
 			productReference = B46789B223A69ECA00CE572D /* iGlance.app */;
 			productType = "com.apple.product-type.application";
@@ -581,6 +586,8 @@
 				Base,
 			);
 			mainGroup = B46789A923A69ECA00CE572D;
+			packageReferences = (
+			);
 			productRefGroup = B46789B323A69ECA00CE572D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -737,6 +744,7 @@
 				B47094EC23C7A30A009D85AD /* ThemedButton.swift in Sources */,
 				B41F6D6823C8E4770046D637 /* ModalViewController.swift in Sources */,
 				B459D29123E4A80800E6CC67 /* CpuViewController.swift in Sources */,
+				6D83B8AC266F1CC500C7681F /* DiskIOMenuBarItem.swift in Sources */,
 				B4C37E6923A8D6BB008C7FC0 /* SegueBetweenEmbedded.swift in Sources */,
 				B439332723E99E0800CDEB1D /* BarGraph.swift in Sources */,
 				B42BCE6023ABF73100A13601 /* DashboardViewController.swift in Sources */,
@@ -979,7 +987,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2.1;
-				DEVELOPMENT_TEAM = J6GXEPK4NG;
+				DEVELOPMENT_TEAM = D597V3ZE4B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1009,7 +1017,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2.1;
-				DEVELOPMENT_TEAM = J6GXEPK4NG;
+				DEVELOPMENT_TEAM = D597V3ZE4B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1022,6 +1030,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MARKETING_VERSION = 2.1;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.iglance.iGlance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

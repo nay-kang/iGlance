@@ -30,6 +30,8 @@ class MenuBarItemManager {
     let battery = BatteryMenuBarItem()
     /// The disk usage menu bar item
     let diskUsage = DiskUsageMenuBarItem()
+    /// The disk io menu bar item
+    let diskIO = DiskIOMenuBarItem()
 
     /// An array containing all the visible AND not visible menu bar items
     var menuBarItems: [MenuBarItem] = []
@@ -42,6 +44,7 @@ class MenuBarItemManager {
         menuBarItems.append(network)
         menuBarItems.append(battery)
         menuBarItems.append(diskUsage)
+        menuBarItems.append(diskIO)
     }
 
     /**

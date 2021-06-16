@@ -1524,15 +1524,29 @@
                                     <action selector="diskUsageCheckboxChanged:" target="sVS-y8-9uS" id="reD-5I-HjN"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nkP-cg-vZz">
+                                <rect key="frame" x="18" y="441" width="145" height="18"/>
+                                <buttonCell key="cell" type="check" title="Show disk IO usage" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="feb-ON-f6n">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="diskIOCheckboxChanged:" target="sVS-y8-9uS" id="Mmo-Og-jnk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Sy9-Qu-Fl1" firstAttribute="leading" secondItem="VIp-kZ-3dC" secondAttribute="leading" constant="20" id="42d-Vc-Vd6"/>
+                            <constraint firstItem="nkP-cg-vZz" firstAttribute="leading" secondItem="Sy9-Qu-Fl1" secondAttribute="leading" id="G0F-6Y-zam"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Sy9-Qu-Fl1" secondAttribute="trailing" constant="20" symbolic="YES" id="Oyp-eg-hdN"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nkP-cg-vZz" secondAttribute="trailing" constant="20" symbolic="YES" id="T5I-pr-8ng"/>
+                            <constraint firstItem="nkP-cg-vZz" firstAttribute="top" secondItem="Sy9-Qu-Fl1" secondAttribute="bottom" constant="6" symbolic="YES" id="l8g-pn-RHy"/>
                             <constraint firstItem="Sy9-Qu-Fl1" firstAttribute="top" secondItem="VIp-kZ-3dC" secondAttribute="top" constant="20" id="wtl-XV-UiD"/>
                         </constraints>
                         <accessibility description="DiskMainView" identifier="DiskMainView"/>
                     </view>
                     <connections>
+                        <outlet property="diskIOCheckbox" destination="nkP-cg-vZz" id="fmJ-xl-sXe"/>
                         <outlet property="diskUsageCheckbox" destination="Sy9-Qu-Fl1" id="cmH-PE-KR3"/>
                         <segue destination="nCO-fc-AGg" kind="custom" identifier="DiskToSettings" customClass="SegueBetweenEmbedded" customModule="iGlance" customModuleProvider="target" id="paY-LT-oG7"/>
                     </connections>
